@@ -6,105 +6,32 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Dav(props) {
-  const { nodes, materials } = useGLTF("/4D CUBO CANARA.gltf");
+  const { nodes, materials } = useGLTF("/3D EMBUTIDOS.gltf");
   return (
-    <group {...props} dispose={null}  scale={.3} position={[0,.05,0]}>
-      <group
-        position={[0.895, 0.315, -0.246]}
-        rotation={[Math.PI / 2, 0, Math.PI / 2]}
-        scale={0.001}
-      >
+    <group {...props} dispose={null} scale={1}>
+      <group position={[0, 0.05, 0]} rotation={[0, -1.571, 0]}>
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes["tq_ARD-geom001"].geometry}
-          material={materials["tq_ARD_front.001"]}
+          geometry={nodes["TQ_ARD-geom"].geometry}
+          material={materials.TQ_ARD_front}
         />
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes["tq_ARD-geom001_1"].geometry}
-          material={materials["back-dil"]}
+          geometry={nodes["TQ_ARD-geom_1"].geometry}
+          material={materials.TQ_ARD_back}
         />
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes["tq_ARD-geom001_2"].geometry}
-          material={materials["tq_ARD_edge.001"]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes["tq_ARD-geom001_3"].geometry}
-          material={materials.tq_ARD_front}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes["tq_ARD-geom001_4"].geometry}
-          material={materials.tq_ARD_back}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes["tq_ARD-geom001_5"].geometry}
-          material={materials.tq_ARD_edge}
+          geometry={nodes["TQ_ARD-geom_2"].geometry}
+          material={materials.TQ_ARD_edge}
         />
       </group>
     </group>
   );
 }
 
-// export function Dav(props) {
-//   const { nodes, materials } = useGLTF("/3D CUBO CANARA.gltf");
-//   return (
-//     <group {...props} dispose={null} scale={.3} position={[0,.05,0]}>
-//       <group
-//         position={[0.895, 0.315, -0.246]}
-//         rotation={[Math.PI / 2, 0, Math.PI / 2]}
-//         scale={0.001}
-//       >
-//         <mesh
-//           castShadow
-//           receiveShadow
-//           geometry={nodes["tq_ARD-geom001"].geometry}
-//           material={materials["tq_ARD_front.001"]}
-//         />
-//         <mesh
-//           castShadow
-//           receiveShadow
-//           geometry={nodes["tq_ARD-geom001_1"].geometry}
-//           material={materials["back-dil"]}
-//         />
-//         <mesh
-//           castShadow
-//           receiveShadow
-//           geometry={nodes["tq_ARD-geom001_2"].geometry}
-//           material={materials["tq_ARD_edge.001"]}
-//         />
-//         <mesh
-//           castShadow
-//           receiveShadow
-//           geometry={nodes["tq_ARD-geom001_3"].geometry}
-//           material={materials.tq_ARD_front}
-//         />
-//         <mesh
-//           castShadow
-//           receiveShadow
-//           geometry={nodes["tq_ARD-geom001_4"].geometry}
-//           material={materials.tq_ARD_back}
-//         />
-//         <mesh
-//           castShadow
-//           receiveShadow
-//           geometry={nodes["tq_ARD-geom001_5"].geometry}
-//           material={materials.tq_ARD_edge}
-//         />
-//       </group>
-//     </group>
-//   );
-// }
+useGLTF.preload("/3D EMBUTIDOS.gltf");
 
-
-// useGLTF.preload("/3D AGROTREND.gltf");
-//nota
