@@ -6,9 +6,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Dav(props) {
-  const { nodes, materials } = useGLTF("/3D EMBUTIDOS.gltf");
+  const { nodes, materials } = useGLTF("/4D EMBUTIDOS.gltf");
   return (
-    <group {...props} dispose={null} scale={1}>
+    <group {...props} dispose={null}>
       <group position={[0, 0.05, 0]} rotation={[0, -1.571, 0]}>
         <mesh
           castShadow
@@ -33,5 +33,5 @@ export function Dav(props) {
   );
 }
 
-useGLTF.preload("/3D EMBUTIDOS.gltf");
+useGLTF.preload("/4D EMBUTIDOS.gltf");
 
