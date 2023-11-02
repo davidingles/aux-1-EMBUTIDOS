@@ -8,7 +8,7 @@ import { useGLTF } from "@react-three/drei";
 export function Dav(props) {
   const { nodes, materials } = useGLTF("/4D EMBUTIDOS.gltf");
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} scale={1}>
       <group position={[0, 0.05, 0]} rotation={[0, -1.571, 0]}>
         <mesh
           castShadow
